@@ -343,7 +343,8 @@ ea@ubuntu:~/openjpeg/covnavi/openjpeg$
 
 This essentially leaves us with just `src` dir. 
 
-To actually import the code into joern db, we'll be mounting it at `/code` inside a docker container , like so:
+To actually import the code into joern db, we'll be mounting it at `/code` inside a docker container , like so
+
 ```
 sudo docker run -v /home/ea/openjpeg/covnavi/openjpeg/:/code -p 7474:7474 --rm -w /code  -it neepl/joern java -jar /joern/bin/joern.jar .
 ```
@@ -413,6 +414,7 @@ Keep this screen open as long as you need the db running.
 A side note: 
 To run joern queries manually, you would start another docker screen like so:
 
+```
 ea@ubuntu:~/openjpeg/cov$ sudo docker ps
 [sudo] password for ea:
 CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                              NAMES
